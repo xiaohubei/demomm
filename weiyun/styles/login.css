@@ -1,0 +1,66 @@
+/*关于样式重置*/
+body,h1,h2,h3,h4,h5,p,dl,dd,ul,ol,form,input,textarea,th,td,select{margin:0;padding:0;}
+em{font-style:normal;}
+li{list-style:none;}
+a{text-decoration:none;}
+img{border:none;vertical-align:top;}  /*这个vertical-align是干嘛的*/
+table{border-collapse:collapse;}
+input,textarea{outline:none;} /*  这个重置应该是outline：none；*/
+textarea{resize:none;overflow:auto;}      /*默认没有滚动条*/
+body{font-size:12px;font-family:"宋体"}
+
+
+.fl{ float:left; }
+.fr{ float:right; }
+.clearfix{zoom:1;}
+.clearfix:after{content:"";display:table;clear:both;}
+
+#header{ height:50px; border-bottom:1px solid #d8dce5;  background:#fff; }
+#header img{ margin:10px 0 0 19px;}
+
+#content{ height:554px; background:#f5f6f9; overflow:hidden;}
+#content .login{ width:620px; height:366px; border:1px solid #b1b3b4; margin:86px auto 0; position:relative; -overflow:hidden; background:#fff;}
+
+#content .login .con{  height:270px; }
+#content .login .header{  height:50px; -background:#ccc;}
+
+#content .login .qr_login { width:153px;height:270px;  border-right:1px solid #e6e6e6; float:left; padding:0 56px; position:relative; }
+#content .login .qr_login h3{ font-size:14px; color:#808080; font-family:bold; text-align:center; }
+#content .login .qr_login .qr{margin-top:35px; width:150px; height:150px; border:1px solid #d3d3d3; position:relative; }
+#content .login .qr_login .qr a{ display:block;-webkit-transition:1s; display: absolute;}
+#content .login .qr_login .qr img{ margin:5px;}
+#content .login .qr_login .qr .qq{ background:url(../images/c_icon_2_tiny.png) no-repeat -157px -473px; width:42px; height:47px; display:block; left:54px; top:54px; position:absolute;  }
+#content .login .qr_login .qr .tip{ display:none; display:absolute;width:151px; height:151px;  background:#000; position:absolute; opacity:0.5;}
+#content .login .qr_login .qr .shade{ }
+#content .login .qr_login .qr .text{ position:absolute; color:#fff; width:150px; line-height:20px; text-align:center; display:block; top:55px; }
+
+#content .qr_login .info{ position:relative; padding-top:28px;}
+#content .qr_login .info a{ color:#808080; padding:9px; border-radius:10px; background:#f1f1f1; font-size:12px; }  /*border-radius不准,padding不在计算宽度内*/
+#content .login .qr_login .qr_hover{ position:absolute; top:-13px; left:236px; z-index: 3; display:none; -webkit-transition:1s; }
+/* #content .qr_login .info a:hover,#content .login .qr_login .qr_hover{ display:block;}有没有这种写法 */
+
+#content .other_login{ float:left;  -background:#ef7e7e;  width:250px; height:270px; margin:0 49px; }
+#content .other_login h3{ color:#808080; font-size:14px; margin-bottom:30px;}
+#content .other_login input{ width:187px; height:8px; border-radius:5px; border:1px solid #ccc; padding:5px;
+	color:#333; font-size:16px;}
+#content .other_login .qqinput {margin-bottom:13px; position:relative;}
+#content .other_login .qq{ padding:16px 34px 16px 27px; }	
+#content .other_login .qqinput span{ background:url(../images/c_icon_2_tiny.png) -179px -160px; width:16px; height:18px; display:block; position:absolute; left:9px; top:10px; }/*不用display：block怎么会支持宽高*/
+#content .other_login .qqinput a{ background:url(../images/c_icon_2_tiny.png) -116px -160px;  position:absolute; right:9px; top:10px; width:21px; height:21px; display:block; }
+#content .other_login .key{margin-bottom:19px; position:relative;}
+#content .other_login .key span{background:url(../images/c_icon_2_tiny.png) -202px -160px;  position:absolute; left:9px; top:10px; width:16px; height:18px; display:block; }
+
+#content .other_login .password{ padding:16px 34px 16px 27px;}
+#content .other_login .qq_login{width:89px; height:33px; background:#86cb2f; border:1px solid #5cbc1d; color:#fff; font-weight:bold; font-size:14px; border-radius:4px; cursor: pointer;}
+#content .other_login .quick_login{ color:#579feb; margin-top:28px; }
+#content .other_login .quick_login a{ color:#579feb; }
+
+.bottom{ width:620px;  height:46px;  font-family:'宋体'; -background:#666; position:relative;}
+.bottom ul{float:right; line-height:46px;}
+.bottom li{ float:left; text-align:center; color:#bfbfbf;}
+.bottom li a{ color:#808080; margin:0 13px 0 13px;  }
+.bottom li .no_right{ border-right:none;}
+
+#tips{ position: relative; top:-63px; right: -100px; color: #fff; background: #3b7cd4; display: inline-block; font-size: 20px; font-weight: bold; padding:5px; border-radius:15px;  }
+
+ /*不给宽高无法定位*/

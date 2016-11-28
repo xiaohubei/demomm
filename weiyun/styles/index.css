@@ -1,0 +1,67 @@
+/*重置默认样式*/
+*{padding:0;margin:0;}
+img{border:none;}
+a{text-decoration:none;}
+li{list-style:none;}
+body{font-family:微软雅黑;}
+
+/*header样式*/ 
+#header{width:100%;background:#fff;position:relative;top:0;left:0;z-index:10;opacity:0.9;}
+#header-top{width:960px;height:80px;margin:0 auto;position:relative;top:0;right:0;}
+#header-top .logo img{position:absolute;top:15px;}
+#header-top .logo a{display:inline-block;width:190px;height:47px;background:#fcfdfe;position:absolute;top:15px;opacity:0;}
+#header-top .web{width:110px;height:40px;float:right;background:url("../images/btn.png") no-repeat;margin-top:20px;}
+#header-top .web a{width:110px;height:40px;color:#fff;line-height:40px;padding-left:24px;font-size:14px;}
+#header-top ul{height:80px;position:absolute;top:0;right:150px;}
+#header-top ul li{float:left;height:76px;}
+#header-top ul a{height:76px;font-size:16px;color:#8d8d8d;margin:0 20px;line-height:76px;display:inline-block;}
+#header-top ul a:hover{color:#000;}
+#header-top ul a.active{color:#000;font-weight:bold;}
+#header-top .focus{width:72px;height:4px;background:#3091f2;position:absolute;bottom:0;right:326px;}
+
+/*content样式*/
+#content{width:100%;height:680px;position:relative;top:-80px;left:0;overflow:hidden;}
+#banner{width:1600px;height:680px;position:absolute;top:0;left:50%;margin-left:-800px;}
+#banner .banner-box{width:960px;height:600px;margin:0 auto;position:absolute;top:80px;left:50%;margin-left:-480px;}
+#banner .banners1{display:block;}
+#banner .banners2{display:none;}
+#banner .banners3{display:none;}
+#banner .banners4{display:none;}
+#banner .banners5{display:none;}
+#banner ul{position:absolute;bottom:18px;left:50%;margin-left:-88px;}
+/*left值定位居中写法:left:50%;margin-left:-85px;*/
+#banner ul li{float:left;margin:0 8px;}
+#banner ul a{display:inline-block;width:18px;height:18px;background:url("../images/i_dot.32.png") no-repeat;}
+#banner ul a:hover{background:url("../images/i_dot_hover.32.png") no-repeat;}
+#banner ul a.active{background:url("../images/i_dot_hover.32.png") no-repeat;}
+#banner .banner-info{float:right;position:relative;top:150px;}
+#banner .banner-box .download{float:left;position:absolute;right:0;bottom:-80px;}
+#banner .banner-box .download a{display:inline-block;width:138px;height:50px;}
+#banner .banner-box .download span{width:112px;height:50px;font-size:28px;float:left;line-height:50px;}
+#banner .banner-box .download span.white{color:#fff;}
+#banner .banner-box .download span.bule{color:#318be8;}
+#banner .banner-box .download img{display:inline-block;margin:14px 0 10px 12px;}
+#banner .banners5 .banner-info{width:108px;height:108px;position:absolute;top:199px;left:50%;margin-left:-56px;}
+#banner .banners5 .banner-info:hover{background:url("../images/banner5-play.png") no-repeat;cursor:pointer;}
+
+/*info样式*/
+#info #info-box{width:960px;height:320px;margin:0 auto;position:absolute;top:720px;left:50%;margin-left:-480px;}
+#info #info1,#info2{cursor:pointer;}
+#info #info1,#info2,#info3{float:left;margin-right:30px;}
+#info li{width:285px;height:47px;background:#f2f2f2;margin-bottom:4px;padding-top:8px;padding-left:15px;}
+#info li:hover{background:#eeeeee;cursor:pointer;}
+#info #info3{margin-right:0;}
+#info h4{font-size:14px;color:#4c4c4c;font-weight:normal;width:245px;height:21px;line-height:21px;}
+#info p{font-size:12px;color:#bdb2bd;width:245px;height:18px;line-height:18px;}
+#info li div{float:right;width:0px;height:0px;border:5px solid rgba(0,0,0,0);border-left-color:#cecece;position:relative;top:-22px;right:15px;}
+
+/*footer样式*/
+#footer{width:100%;height:126px;background:#e6e6e6;position:absolute;top:1040px;left:0;}
+#footer #footer-box{width:960px;height:126px;margin:0 auto;position:absolute;bottom:0px;left:50%;margin-left:-480px;color:#999999;font-size:12px;}
+#footer-box #footer-logo{position:relative;top:40px;left:0;}
+#footer-box ul{position:absolute;top:52px;left:130px;}
+#footer-box li{float:left;}
+#footer-box li a{color:#999999;}
+#footer-box li a:hover{text-decoration:underline;}
+#footer-box li span{margin:0 5px;}
+#footer-box p{position:absolute;top:70px;left:130px;}

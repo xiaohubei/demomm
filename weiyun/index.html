@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="header-top">
+			<div class="logo">
+				<img src="images/logo.png"/>
+				<span><a href="index.html"></a></span>
+			</div>
+			<div class="web">
+				<a href="login.html">网页版</a>
+			</div>
+			<ul>
+				<li><a href="index.html" class="active">首页</a></li>
+				<li><a href="down.html">下载</a></li>
+				<li><a href="functions.html">功能介绍</a></li>
+			</ul>
+			<div class="focus"></div>
+		</div>
+	</div>
+	<div id="content">
+		<div id="banner">
+			<div class="banners1">
+				<img src="images/banner1.jpg" alt="">
+				<div class="banner-box">
+					<div class="banner-info">
+						<img src="images/txt1.png" alt="">
+						<div class="download">
+							<a href="javascript:;">
+								<span class="white">马上下载</span>
+								<img src="images/ico_white.32.png" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="banners2">
+				<img src="images/banner2.jpg" alt="">
+				<div class="banner-box">
+					<div class="banner-info">
+						<img src="images/txt2.png" alt="">
+						<div class="download">
+							<a href="#">
+								<span class="white">马上下载</span>
+								<img src="images/ico_white.32.png" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="banners3">
+				<img src="images/banner3.jpg" alt="">
+				<div class="banner-box">
+					<div class="banner-info">
+						<img src="images/txt3.png" alt="">
+						<div class="download">
+							<a href="#">
+								<span class="bule">马上下载</span>
+								<img src="images/ico_bule.32.png" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="banners4">
+				<img src="images/banner4.jpg" alt="">
+				<div class="banner-box">
+					<div class="banner-info">
+						<img src="images/txt4.png" alt="">
+						<div class="download">
+							<a href="#">
+								<span class="bule">马上下载</span>
+								<img src="images/ico_bule.32.png" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="banners5">
+				<img src="images/banner5.jpg" alt="">
+				<div class="banner-box">
+					<div class="banner-info"></div>
+				</div>
+			</div>
+			<div id="focus">
+				<ul>
+					<li><a href="javascript:;" class="active"></a></li>
+					<li><a href="javascript:;"></a></li>
+					<li><a href="javascript:;"></a></li>
+					<li><a href="javascript:;"></a></li>
+					<li><a href="javascript:;"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="info">
+		<div id="info-box">
+			<div id="info1"><img src="images/pic_10t.png" alt=""></div>
+			<div id="info2"><img src="images/pic_beginner.png" alt=""></div>
+			<div id="info3">
+				<ul>
+					<li>
+						<h4>腾讯微云用户超过3亿</h4>
+						<p>2014-12-20-10:42</p>
+						<div></div>
+					</li>
+					<li>
+						<h4>腾讯微云用户超过3亿 3亿</h4>
+						<p>2014-12-20-10:42</p>
+						<div></div>
+					</li>
+					<li>
+						<h4>腾讯微云用户超过3亿 超过3亿 3亿</h4>
+						<p>2014-12-20-10:42</p>
+						<div></div>
+					</li>
+					<li>
+						<h4>用户超过3亿 3亿</h4>
+						<p>2014-12-20-10:42</p>
+						<div></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div id="footer-box">
+			<div id="footer-logo">
+				<img src="images/logo2.png" alt="">
+			</div>
+			<ul>
+				<li><a href="">关于腾讯</a><span>|</span></li>
+				<li><a href="">服务条款</a><span>|</span></li>
+				<li><a href="">客服中心</a><span>|</span></li>
+				<li>粤B2-20090059-86号</li>
+			</ul>
+			<p>Copyright © 1998 - 2014 Tencent. All Rights Reserved. 腾讯公司 版权所有</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+<script>
+var oWrapper=document.getElementById('wrapper');
+var oHeader=document.getElementById('header');
+
+var oContent=document.getElementById('content');
+var oBanner=document.getElementById('banner');
+var oFocus=document.getElementById('focus');
+var aFocLi=oFocus.getElementsByTagName('li');
+var aBanners=oBanner.children;
+
+var oFooter=document.getElementById('footer');
+
+var num=0;
+var timer=null;
+
+fnTab(num);
+
+function fnTab(n){
+	timer=setInterval(function(){
+		num++;
+		if(num==aFocLi.length){
+			num=0;
+		}
+		SetActive(num);
+	},4000);
+}
+
+for(var i=0;i<aFocLi.length;i++){
+	aFocLi[i].index=i;
+	aFocLi[i].onclick=function(){
+		SetActive(this.index);
+		num=this.index;
+	}
+}
+
+oBanner.onmouseover=function(){
+	clearInterval(timer);
+}
+oBanner.onmouseout=function(){
+	fnTab(num);
+}
+
+function SetActive(n){
+	for(var i=0;i<aFocLi.length;i++){
+		aBanners[i].style.display='none';
+		aFocLi[i].children[0].className='';
+	}
+	aBanners[n].style.display='block';
+	aFocLi[n].children[0].className='active';
+}
+</script>

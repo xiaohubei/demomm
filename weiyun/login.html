@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录页</title>
+	<link rel="stylesheet" href="styles/login.css" style="text/css">
+	<script type="text/javascript">
+		window.onload=function (){
+			var oQr=document.getElementById('qr');
+			var oHover=document.getElementById('hover');
+			oQr.onmousemove=function(){
+				oHover.style.display="block";
+			}
+			oQr.onmouseout=function(){
+				oHover.style.display="none";
+			}
+		}
+			
+	</script>
+</head>
+<body>
+	<div id="header">
+		<a href="index.html"><img src="images/web-logo-v2.png"></a>
+	</div>
+
+	<div id="content">
+		<div class="login">
+				<!-- 头部 -->
+				<div class="header"></div>
+				
+				<div class="con">
+				<!-- qr -->
+					<div class="qr_login">
+						<h3>安全登录，防止被盗</h3>
+						<div class="qr">
+							<a id="qr" href="#">
+								<img src="images/ewm.png" alt="扫描二维码" />
+								<span class="qq"></span>
+							</a>
+							<div class="tip">
+								<div class="shade"></div>
+								<span class="text">
+									 二维码失效
+									<br/>
+									请点击刷新
+								</span>
+							</div>	
+
+							<div class="info"><a href="#">使用QQ手机版扫描二维码</a></div>	
+						</div>
+						<div id="hover" class="qr_hover"><img src="images/big_24_tiny.png"></div>							
+					</div>
+					<!-- other-->		
+					<div class="other_login">
+							<h3>帐号登录</h3>
+							<div class="qqinput">
+								<input class="qq" type="text" value="532867447" />
+								<span></span>
+								<a href="#"></a>
+							</div>
+							<div class="key">
+								<input class="password" type="text" value="*********"/>
+								<span></span>
+							</div>							
+							<a href="main.html"><input class="qq_login" type="button" value="登录" /></a>
+							<div class="quick_login"><a href="#"><<返回快速登录</a></div>
+							<div id="tips">Tip:点击登录跳转</div>
+					</div>  
+				</div>
+				
+
+				<div class="bottom">
+					<ul>
+						<li><a href="#">忘记密码？</a>|</li>
+						<li><a href="#">注册新帐号</a>|</li>
+						<li><a class="no_right" href="#">意见反馈</a></li>
+					</ul>
+				</div>
+		</div>
+
+	</div>
+	
+</body>
+</html>
+

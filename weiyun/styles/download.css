@@ -1,0 +1,65 @@
+/*重置默认样式*/
+*{padding:0;margin:0;}
+img{border:none;}
+a{text-decoration:none;}
+li{list-style:none;}
+h3{font-weight:normal;}
+body{font-family:'microsoft yahei';}
+
+/*header样式*/
+#header{width:100%;background:#fff;position:relative;top:0;left:0;z-index:10;opacity:0.9;}
+#header-top{width:960px;height:80px;margin:0 auto;position:relative;top:0;right:0;}
+#header-top .logo img{position:absolute;top:15px;}
+#header-top .logo a{display:inline-block;width:190px;height:47px;background:#fcfdfe;position:absolute;top:15px;opacity:0;}
+#header-top .web{width:110px;height:40px;float:right;background:url("../images/btn.png") no-repeat;margin-top:20px;}
+#header-top .web a{width:110px;height:40px;color:#fff;line-height:40px;padding-left:24px;font-size:14px;}
+#header-top ul{height:80px;position:absolute;top:0;right:150px;}
+#header-top ul li{float:left;height:76px;}
+#header-top ul a{height:76px;font-size:16px;color:#8d8d8d;margin:0 20px;line-height:76px;display:inline-block;}
+#header-top ul a:hover{color:#000;}
+#header-top ul a.active{ color:#000;font-weight:bold;}
+#header-top .focus{width:72px;height:4px;background:#3091f2;position:absolute;bottom:0;right:254px;}
+
+/*content样式*/
+#content{width:100%;height:806px;position:relative;top:0px;left:0;overflow:hidden;border-top:1px solid #d9d9d9;}
+#content #content-box{width:960px;height:764px;margin:0 auto;position:absolute;top:40px;left:50%;margin-left:-480px;border-bottom:1px solid #e6e6e6;}
+#content-box img{display:block;}
+#content-box ul{height:220px;}
+#content-box ul li{float:left;margin-right:80px;}
+#content-box ul li.active{margin-right:0;}
+
+#content-box ol{height:168px;margin-top:20px;}
+#content-box ol li{float:left;width:410px;height:88px;margin-bottom:20px;background:#f2f2f2;margin-right:80px;border-radius:5px;padding:30px 0 30px 30px;}
+#content-box ol li.active{margin-right:0;}
+#content-box ol li .box-right{float:left;height:88px;}
+#content-box ol li .box-left{float:left;width:200px}
+#content-box ol li .box-left h3{font-size:24px;line-height:24px;color:#333;}
+#content-box ol li .box-left p{width:110px;height:38px;margin-top:20px;background:url("../images/bg_download_btns.png") no-repeat 0 0;cursor:pointer;}
+#content-box ol li .box-left span{width:20px;height:20px;display:inline-block;margin-top:9px;margin-left:10px;float:left;margin-right:8px;}
+#content-box ol li .box-left a{display:inline-block;font-size:14px;color:#fff;height:38px;line-height:38px;float:left;margin-top:-1px;}
+#content-box ol li .box-left p.windows span{background:url("../images/bg_download_btns.png") no-repeat -112px 0;}
+#content-box ol li .box-left p.android span{background:url("../images/bg_download_btns.png") no-repeat -112px -21px;}
+#content-box ol li .box-left p.iphone span{background:url("../images/bg_download_btns.png") no-repeat -112px -42px;}
+#content-box ol li .box-right p{font-size:12px;color:#999999;line-height:22px;}
+
+
+/*info样式*/
+#info #info-box{width:960px;height:383px;margin:0 auto;position:relative;top:0;left:50%;margin-left:-480px;}
+#info #info-box #info-left,#info-right{float:left;}
+#info #info-box #info-left{margin:74px 73px 0 25px;}
+#info #info-box #info-right{margin-top:109px;}
+#info #info-box #info-right #info-right-text{margin-top:18px;margin-bottom:18px;}
+#info #info-box #info-right h3{font-size:24px;color:#333333;height:24px;line-height:24px;}
+#info #info-box #info-right p{font-size:12px;color:#aaaa99;height:18px;line-height:18px;}
+#info #info-box #info-right #info-right-web{width:110px;height:40px;font-size:14px;color:#fff;line-height:40px;text-align:center;background:url("../images/bg_download_btns.png") no-repeat 0 -40px;}
+
+/*footer样式*/
+#footer{width:100%;height:126px;background:#e6e6e6;position:relative;top:0;left:0;}
+#footer #footer-box{width:960px;height:126px;margin:0 auto;position:absolute;bottom:0px;left:50%;margin-left:-480px;color:#999999;font-size:12px;}
+#footer-box #footer-logo{position:relative;top:40px;left:0;}
+#footer-box ul{position:absolute;top:52px;left:130px;}
+#footer-box li{float:left;}
+#footer-box li a{color:#999999;}
+#footer-box li a:hover{text-decoration:underline;}
+#footer-box li span{margin:0 5px;}
+#footer-box p{position:absolute;top:70px;left:130px;}

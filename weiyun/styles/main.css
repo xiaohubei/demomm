@@ -1,0 +1,253 @@
+/*关于样式重置*/ 
+body,h1,h2,h3,h4,h5,p,dl,dd,ul,li,ol,form,input,textarea,th,td,select{margin:0;padding:0;}
+em{font-style:normal;}
+li{list-style:none;} 
+a{text-decoration:none;}
+img{border:none;vertical-align:top;}  /*这个vertical-align是干嘛的*/
+table{border-collapse:collapse;}
+input,textarea{outline:none;} /*  这个重置应该是outline：none；*/
+textarea{resize:none;overflow:auto;}      /*默认没有滚动条*/
+body{font-size:12px;font-family:"微软雅黑"; overflow:hidden;} /*去掉系统默认滚动条*/
+
+/*end关于样式重置*/
+
+/*public.css*/ 
+.clear{zoom:1;}
+.clear:after{content:'';display:block;clear:both;}
+.fl{float:left;}
+.fr{float:right;}
+.gradient{
+	background:linear-gradient(top,#FFFFFF,#f8f8f8);
+	background:-webkit-linear-gradient(top,#FFFFFF,#f8f8f8);
+	background:-moz-linear-gradient(top,#FFFFFF,#f8f8f8);
+	background:-ms-linear-gradient(top,#FFFFFF,#f8f8f8);
+	-ms-filter:"progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#FFFFFF, endColorstr=#f8f8f8)";
+	+background:#fbfbfb;/*这是一个hack？*/
+}
+/*css制作三角形图标*/
+.triangle_up_orange,.triangle_up_green,.triangle_down_red,.triangle_down_gray{ width:0; height:0; border-left:5px solid transparent; border-right:5px solid transparent;_border-left:5px solid #ffffff;_border-right:5px solid ffffff;position:absolute; overflow:hidden;}/*_border-left这也是单独给ie6设置的一个*/
+.triangle_up_orange{ border-bottom:5px solid #ff9d11;}
+.triangle_up_green{ border-bottom:5px solid #67ae00;}
+.triangle_down_red{ border-top:5px solid #cc0d13;}
+.triangle_down_gray{ border-top:5px solid #797f8b;}
+/*end css制作三角形图标*/
+
+/*end_public.css*/
+
+/*layout*/
+/*头部信息*/
+#top{ height:50px; border-bottom:1px solid #d8dce5; position:relative; }
+
+#top .logo{ float:left; }
+#top .logo a{}
+#top .logo img{ margin:10px 0 0 19px;}
+
+#top .ico{ float:left; height:50px; margin-left:29px; }
+#top .ico a{ }
+#top .iphone{ width:27px; height:27px; display:inline-block; background:url(../img/lay-header.png) no-repeat 0 -311px; margin-top:11px; }
+#top .android{ width:27px; height:27px; display:inline-block;  background:url(../img/lay-header.png) no-repeat -39px -311px; margin-top:11px; }
+/*背景定位1px不差*/
+
+#top .iphone:hover{ background-position:0 -361px;}
+#top .android:hover{ background-position:-39px -361px;}
+
+#top .iphone_tip{ width:120px; height:28px; border:1px solid #ea8a00; background:#ff9d11; border-radius:2px; position:absolute; left:157px; top:42px; display:none; }
+#top .iphone_tip span{ color:#fff; line-height:28px; margin:10px 9px; text-align:center;}
+#top .iphone_tip a{ position:absolute; top:-5px; left:58px;   }
+#top .android_tip{ width:120px; height:28px; border:1px solid #67ae00; background:#73bd13; border-radius:2px;  position:absolute; left:186px; top:42px; display:none;  }
+#top .android_tip span{ color:#fff; line-height:28px; margin:10px 9px; text-align:center;}
+#top .android_tip a{ position:absolute; top:-5px; left:58px;  }
+/*图标制作，三角形，定位，文字怎么居中的？*/
+
+/*手机信息弹窗*/
+#top .mask{display:none;background:#fff;opacity:0.5;position:absolute;z-index:10;transition:1s;}
+#top .phone_download{display:none;width:588px;height:366px;border:1px solid #9198a6;position:absolute;left:0;top:0;z-index:11;box-shadow:0 0 2px 2px #ebebeb;transition:1s;}
+#top .alert_title{font-size:18px;height:48px;line-height:48px;border-bottom:1px solid #d8dce5;padding-left:18px;}
+#top .alert_title a{font-size:34px;color:#c7ced8;float:right;margin-right:14px;}
+#top .alert_title a:hover{color:#666666;}
+#top .alert_left{float:left;}
+#top .alert_left img{width:221px;height:242px;margin-left:20px;margin-top:35px;}
+#top .alert_right{float:left;}
+#top .alert_right ul{height:199px;border-left:1px solid #e6e6e6;margin-top:35px;padding-left:50px;font-size:16px;}
+#top .alert_right li.way{height:16px;font-weight:bold;color:#333;}
+#top .alert_right li.startload{width:140px;height:50px;color:#fff;line-height:50px;text-align:center;background:#2f90f2;border-radius:3px;margin-top:25px;margin-bottom:30px;}
+#top .alert_right li.phonenum{height:28px;line-height:28px;font-size:12px;color:#999;}
+#top .alert_right li input{width:158px;height:28px;border:1px solid #b3b3b3;margin-top:5px;}
+#top .alert_right li span{display:inline-block;width:60px;height:30px;line-height:30px;text-align:center;background:#2f90f2;border-radius:3px;color:#fff;font-size:12px;margin-left:10px;}
+/*end手机信息弹窗*/
+
+#top .ad{ position:absolute; right:290px; height:49px; line-height:49px; }
+#top .ad .ad_link{ color:#7d838f;}
+#top .ad .feedback{ color:#7d838f; margin-left:16.5px;}/*为什么就差这半像素*/
+#top .ad a:hover{ text-decoration:underline;}
+
+#top .search{ float:right; width:162px; height:30px; position:relative; top:10px; }
+#top .search input{ width:140px; height:14px; border:1px solid #c2c3ca; padding:7px 0 7px 30px; color:#373737; line-height:14px; font-size:12px; opacity:0.5; }
+#top .search i{ position: absolute; width:13px; height:13px; background:url(../img/lay-header.png) no-repeat 0 -168px; margin:9px 0 0 10px;}/*absolute，能让i支持宽高*/
+#top .search input:hover{border:1px solid #5ba8fb; }
+
+#top .user{float:right; height:100%; width:80px;margin-right:15px;  }
+#top .user .pic{width:78px; height:43px; -border:1px solid #c8ccd5; border:1px solid #fff; border-bottom:none; margin:2px 10px 0 5px; z-index:20; background:#fff; }/*改变border-color*/
+#top .user .pic img{ width:32px; height:32px; padding:7px 0 0 16px;}
+#top .user .pic	a{display:inline-block; width:7px; height:4px; background:url(../img/lay-header.png) no-repeat -51px -222px; position:relative; top:13px; left:6px; }
+#top .info{ width:168px; height:242px; border:1px solid #c8ccd5; z-index:10; position:absolute; right:10px; top:46px; background:#fff; display:none; }
+
+#top .userinfo{ width:168px; height:242px; border:1px solid #c8ccd5; z-index:3; position:absolute; right:10px; top:46px; background:#fff; display:none; }
+#top .userinfo ul{padding-top:5px;padding-bottom:4px;padding-left:15px;}
+#top .userinfo ul li{height:24px;line-height:24px;}
+#top .userinfo ul li.progressbar{line-height:22px;width:136px;height:8px;border:1px solid #d7d9e0;margin-top:6px;margin-bottom:6px;background:#edeff4;}
+#top .userinfo ol{padding-left:1px;padding-right:1px;}
+#top .userinfo ol li{height:34px;line-height:34px;border-top:1px solid #e6e7ec;padding-left:15px;}
+#top .userinfo ol li.exit{height:32px;line-height:32px;}
+#top .userinfo ol li:hover{background:#f3f8ff;}
+.gray{color:#7d838f;}
+
+/*为什么内容有引号，渲染出来却没有了呢*/
+
+/*导航信息*/
+#nav{ width:159px;  border-right:1px solid #d8dce5; float:left; background:#eaedf4;}
+
+#nav .upload{ width:100%; height:62px;  overflow:hidden;}
+#nav .upload .btn{  }
+#nav .upload .btn span{color:#fff;  font-size:22px; }
+#nav .upload .btn a{width:130px; height:36px; line-height:32px; text-align:center; background:#3091f2; margin:14px 14px 12px 15px;color:#fff; display: block; font-size:13px;} /*如何把文字调成跟微云一样？？？*/
+#nav .info{ display:none; position:absolute; left:15px; top:100px; z-index: 10;}
+#nav .info ul{  }
+#nav .info li{ position:relative; width:130px; height:34px;}
+#nav .info a{ width:111px; height:32px; border:1px solid #c8ccd5; line-height: 32px; padding-left:17px; color: #666666; display: block; position:relative; background:#fff;}
+#nav .info .note{ top:-1px;}
+#nav .info span{ display: block; width:27px; height:15px;background:url(../img/ico-new.png); position:absolute; top:8px; right:20px; } /*为什么不能设置right：7px;*/
+
+
+#nav .box{ width:100%;}  /*为什么只有159px,少了1px??*/
+#nav .box ul{}
+#nav .box ul .perlist{ height:32px; padding:2px 0; margin-bottom:3px;  font-size:14px; line-height:32px; text-indent:50px; position:relative; 
+}
+#nav .box ul .perlist a{color: #505254; width:100%; height:36px; display: block;}
+#nav .box ul .perlist span{ display: inline-block; width:20px; height:20px;  position:absolute; left:28px; top:8px; }
+#nav .box ul .perlist:hover{ background:#e0e4ed;}
+#nav .box ul .gap{ height:20px; overflow:hidden; }
+#nav .box ul .gap span{ width:100%;  height:0; border-top: 1px solid #d8dce5; margin:9px 0; display: block;  background: url(../img/ico-message.png) no-repeat; }
+#nav .box ul .list1 span { background-position: 0 -6px; }
+#nav .box ul .list2 span { background-position: 0 -37px; }
+#nav .box ul .list3 span { background-position: 0 -100px; }
+#nav .box ul .list4 span { background-position: 0 -68px; }
+#nav .box ul .list5 span { background-position: 0 -197px; }
+#nav .box ul .list6 span { background-position: 0 -165px; }
+#nav .box ul .list7 span { background-position: no-repeat 0 -132px; }
+#nav .box ul .list8 span { background-position: no-repeat 0 -230px; }
+#nav .box ul .list9 span { background-position: no-repeat 0 -262px; }
+#nav .box ul .list10 span { background-position: no-repeat 0 -295px; }
+#nav .box ul .list11 span { background-position: no-repeat 0 -326px; }
+
+#nav .box .download{ margin:32px 0 10px 11px; background: url(../img/install-download.png) no-repeat; }
+#nav .box .download a{ height:42px; display:inline-block;}
+#nav .box .download span{ color:#3091f2; display: none; }
+#nav .box .download .android{width:48px; background-position:0 0;  }
+#nav .box .download .iphone{width:43px; background-position: -48px 0;  }
+#nav .box .download .ipad{width:34px; background-position: -91px 0;  }
+#nav .box .download .android:hover{  background-position: 0 -42px;  }
+#nav .box .download .iphone:hover{ background-position:-48px -42px;  }
+#nav .box .download .ipad:hover{ background-position: -91px -42px;  }
+
+
+#nav .scrollbar{}
+#nav .scrollbar .wrap{}
+#nav .scrollbar .drager{}
+
+/*内容*/
+#content{ float:left; background:#fff; width:1206px; }
+/*内容的功能按钮*/
+#content .confnbtn{  height:49px; border-bottom:1px solid #c8ccd5; background:#f5f6f9; padding:13px 12px 0 12px; }
+
+#content .btn{ float:left;}
+#content .btn a{ float:left;  margin-right: 5px; display: inline-block; background:#ffffff;}
+ /*没有给浮动造成在ie7下整体往下掉，坑爹！？？？*/
+#content .btn a span{ padding:0 18px; font-size:13px; color:#505254; height:34px; border:1px #c7c9cf solid; display: inline-block; line-height: 34px; }
+#content .btn a i{ display: inline-block; width:20px; height:20px; margin-top: -2px;  vertical-align: middle; opacity: 0.6; background: url(../img/ico-message.png) no-repeat; } /*vertical-align:middle/top/bottom; 属性设置元素的垂直对齐方式。*/
+#content .btn .btn_7 span{ padding:0 10px;  } 
+#content .btn .btn_1 i{ background-position: 0 -357px; }
+#content .btn .btn_2 i{ background-position: 0 -389px; }
+#content .btn .btn_3 i{ background-position: 0 -454px; }
+#content .btn .btn_4 i{ background-position: 0 -518px; }
+#content .btn .btn_5 i{ background-position: 0 -327px; }
+#content .btn .btn_6 i{ background-position:  0 -550px; }
+#content .btn .btn_7 i{ background-position: 2px -710px; position: relative; *+top:8px;} /*专门为ie7写的样式，坑爹*/
+
+#content .dropdown{ float:right; background:#fcfcfd;z-index:20; }
+#content .dropdown a{ float:right; width:48px; height:36px; border:1px solid #c7c9cf; display: inline-block; }
+#content .dropdown .view_tree{ border-right:none; background: url(../img/ico-message.png) no-repeat 17px -1087px;opacity:1;   }
+#content .dropdown .sort {  background: url(../img/ico-message.png) no-repeat 12px -990px; opacity:1; }
+#content .dropdown .view_tree:hover{ opacity:1; background-color: #e0e4ed; }
+#content .dropdown .sort:hover { opacity:1; border-bottom: 2px solid #fff;  }
+#content .dropdown .sort i{width:10px; height:10px;  display: inline-block; background: url(../img/ico-message.png) no-repeat 0 -1134px; position: relative; left:31px; top:13px;}
+
+
+#content .confnbtn .sort_mode { display:none; background:#fff; float:right; width:150px; border:1px solid #c8ccd5; position:absolute; right:12px;top:101px; z-index:20; }
+#content .confnbtn .sort_mode li{ height:30px; }
+#content .confnbtn .sort_mode li a{display: inline-block; height: 30px; line-height: 30px; color: #020202;}
+#content .confnbtn .sort_mode li i{display: inline-block; height: 16px; width:33px; vertical-align: middle; opacity: 0.7; margin-right:5px; background: url(../img/ico-message.png) no-repeat; }
+#content .confnbtn .sort_mode .mode_1 i{ background-position: 15px -1066px; }
+#content .confnbtn .sort_mode .mode_2 i{ background-position: 15px -1033px;  }
+#content .confnbtn .sort_mode .mode_3 i{ background-position: 15px -1002px;  }
+#content .confnbtn .sort_mode .active{ display: inline-block;  background:#eaf5ff; border-top: 1px solid #bfdaf4; border-bottom:1px solid #bfdaf4; }
+
+/*内容侧边栏-----目录树*/
+
+#content .con{ }
+#content .con .directory_tree{ float:left; width:160px; height:500px; border-right:1px solid #e6e9f0; -display:none; padding:0 12px; }
+#content .con .text_1{ width:158px; height:26px; line-height: 26px; background:#e7f2fe; border:1px solid #bfdaf4; margin:1px 0;cursor:pointer; }
+#content .con .list_1 { margin-left:21px; }
+#content .con .list_1 li{  line-height: 26px; margin:1px 0; cursor:pointer;background:#fff; border:1px solid #fff;  }
+#content .con .list_1 li:hover{ background:#f3f8ff; border:1px solid #d5e5f5; }
+#content .con .directory_tree i{ width:10px; height:10px; display: inline-block; background:url(../img/folder-tree.png) no-repeat; }
+#content .con .directory_tree .arrow_up{ background-position:3px -51px; }
+#content .con .directory_tree .arrow_down{ background-position:3px -100px; }
+#content .con .directory_tree .folder{ width:15px; height:13px; display: inline-block; background:url(../img/folder-tree.png) no-repeat 0 0; }
+#content .con .text_1 em{ overflow:hidden; }
+
+
+/*主内容*/
+#content .con .box{ float:left;  }
+
+/*主内容为信息索引区*/
+#content .box .path_wrap{ height:30px; border-bottom: 1px solid #e6e9f0; }
+#content .box .path_wrap label{ float: left; width:34px; height:30px; border-right:1px solid #d7d9e0; display: inline-block;   z-index: 20; position:relative; } /*不给定为，给层级是没用的？？*/
+#content .box .allselect{/*未全选*/ background:url(../img/ico.png) 10px -260px;}
+#content .box .allselect_all{/*全选*/ background:url(../img/ico.png) 10px -310px;}
+
+#content .box .main_path{ line-height: 30px; position: relative; padding-left:5px; }
+#content .box .main_path .path{ display: inline-block; position: relative; color: #020202; padding: 0 18px 0 25px; margin-left:-19px; background: url(../img/main-path.png ) no-repeat right -50px;  }/*为何如此设置？？？*/
+#content .box .main_path span{ display: inline-block; line-height:31px; }
+#content .box .main_path .current{ background-position:right -200px;  }  /*为何如此？？？*/
+
+/*主内容为信息展示*/
+#content .box .files {height:400px; position:relative;  }
+
+ /*左键单击时，临时创建的Div*/
+#content .box .files .ltempdiv{ position:absolute; left:0; top:0; background:rgba(232,243,249,0.6); border:1px dashed #737373;  z-index: 200;}
+
+/*右键单击时，出现的Div*/    
+#content .box .content_menu{ position:absolute; left:0; top:0; background:#fff; border:1px solid #c8ccd5;  z-index: 20; box-shadow:0px 1px 3px rgba(0,0,0,0.2); overflow:hidden; display: none;  } 
+#content .box .content_menu ul{ width:160px; }
+#content .box .content_menu li{ overflow:hidden; height:32px;}
+#content .box .content_menu a{ position:relative; height:20px; padding:5px 0; color:#3a404a; overflow:hidden; display: block; border-top:1px #fff solid; border-bottom:1px #fff solid; background:#fff; }
+#content .box .content_menu a:hover{border-top:1px #d5e5f5 solid; border-bottom:1px #d5e5f5 solid; background:#f3f8ff; }/*微云这块有必要给a链接加-cursor:pointer;？？？*/
+#content .box .content_menu i{ display: block; width:20px; height:20px; background:#fff; position:absolute; left:5px; top:3px; background:url(../img/ico-message.png) no-repeat -999px -999px; opacity:.7;}
+#content .box .content_menu a:hover i{ opacity: 1;}  /*怎么不通过js实现他透明度变化*/
+#content .box .content_menu .ico_share{ background-position:1px -390px ; margin-right:2px; }
+#content .box .content_menu span{ display: block; line-height: 20px; padding:0 12px 0 32px; overflow:hidden; white-space:nowrap; word-wrap:break-word; text-overflow:ellipsis;  }
+/*end 右键单击时，出现的Div*/    
+
+#content .box .files  .list_wrap{ height:123px; float:left;  cursor:pointer; z-index: 51; }
+#content .box .files .list_file{ width:118px;  margin:0 5px 5px 0; position:relative; border: 1px solid #fff;  background:#fff;}
+#content .box .files .move{ background: #e9f3fd; border:solid 1px #c3d8f0; }
+
+#content .box .files .list_file label{ position: absolute; width:30px; height:30px; left:-1px; top:-1px; background: url(../img/ico.png ) no-repeat 0 -370px; display: none; }
+
+#content .box .files .list_file .selected{ background: url(../img/ico.png ) no-repeat 0 -421px; }
+
+#content .box .files .list_file .img{ height:64px; width:auto; padding: 6px 2px 2px 2px; text-align: center; display: block; }  /*微云这块为什么可以设置？*/
+#content .box .files .list_file .img i{ width:64px; height:64px; display: inline-block; overflow:hidden;  background: url(../img/file.png ) no-repeat; }
+#content .box .files .list_file .name{ white-space:normal; padding-bottom:5px; text-align:center; line-height:25px; display: block; overflow:hidden; white-space:normal; text-overflow:ellipsis; }
+

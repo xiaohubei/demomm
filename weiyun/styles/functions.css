@@ -1,0 +1,95 @@
+/*重置样式*/
+/*清除默认样式*/
+body,h1,h2,h3,h4,h5,p,dl,dd,ul,ol,form,input,textarea,th,td,select{margin:0;padding:0;}
+a{text-decoration:none;}
+img{border:none;vertical-align:top;} /*这个vertical-align是干嘛的*/
+li{list-style:none; }
+input,textarea,select{border:none;outline:none;background:none;}
+textarea{resize:none; overflow:auto;}
+h1,h2,h3,h4,h5,h6{font-size:1em;}
+i,em{font-style:normal;}
+body{ font-size:16px; font-family:"microsoft yahei";}
+a,label{blr:expression(this.onFocus=this.blur())}/*去掉点击文字时候的虚边框 ????*/
+
+/*清除浮动*/
+.fl{ float:left; }
+.fr{ float:right; }
+.clearfix{zoom:1;}
+.clearfix:after{content:"";display:table;clear:both;}
+
+
+/*public样式*/
+
+#wy_header{ height:80px; background:#fff; position:relative;}
+#wy_contenter { background:#f2f2f2; overflow:hidden; } /* overflow:hidden 为什么可以用来阻止margin传递*/
+
+#wy_footer { height:126px; background:#e6e6e6;}
+
+
+/*头部样式*/
+#wy_header .header_logo{ position:absolute; left:50%; top:15px;  margin-left:-480px;  } 
+#wy_header .header_nav{ width:960px; height:80px; font-size:16px; color:#000; z-index:3; position:relative; margin:0 auto; }
+#wy_header .header_nav .logo_link{ width:200px; height:47px; margin:15px 0 18px 0; }
+#wy_header .header_nav .logo_link a{ width:200px; height:47px; display:block; }
+#wy_header .header_nav .nav{ float:right; margin-right:150px;}
+#wy_header .header_nav .nav li{ float:left; height:80px;}
+#wy_header .header_nav .nav a{  padding:0 20px 4px; color:#8d8d8d; line-height:76px; text-align:center;}
+#wy_header .header_nav .nav .active{ color:#000; font-weight:700;  border-bottom:4px solid #3091f2;  display:block; padding-bottom:0; }
+#wy_header .header_nav .nav a:hover{ color:#000;}
+#wy_header .header_nav .load_link{ width:110px; height:40px; position:absolute; right:0; top:20px; background:url(../images/btn.png); }
+#wy_header .header_nav .load_link:hover{ opacity:0.8;}
+#wy_header .header_nav .load_link a{ width:110px; height:40px; line-height:40px; padding-left:24px; color:#fff; font-size:14px; display:block;}
+
+/*内容样式*/
+
+#wy_contenter .video{ width:960px; height:540px; margin:20px auto 30px;}
+#wy_contenter .video a{ width:960px; height:540px;}
+#wy_contenter .video img{ }
+
+#wy_contenter .function_show{ width:860px; margin:0 auto 80px; background:#fff; padding:50px 50px 80px;}
+
+#wy_contenter .function_ico{ height:132px; border-bottom:1px solid #e6e6e6; }
+#wy_contenter .function_ico .ico{ height:132px; width:861px;}
+#wy_contenter .function_ico li{float:left; width:70px; height:132px; position:relative; left:0; top:0;  margin:0 73px 0 10px; transition:0.3s;background:url(../images/function-icons.png) no-repeat;}
+#wy_contenter .function_ico a{ width:70px; height:132px; display:block; }
+#wy_contenter .function_ico .ico_1{ background-position:0 0;}
+#wy_contenter .function_ico .ico_2{ background-position:-122px 0;}
+#wy_contenter .function_ico .ico_3{ background-position:-243px 0;}      /*有问题*/
+#wy_contenter .function_ico .ico_4{ background-position:-365px 0;}
+#wy_contenter .function_ico .ico_5{ background-position:-487px 0;}
+#wy_contenter .function_ico .ico_6{ background-position:-608px 0; margin-right:0;}
+
+#wy_contenter .function_ico li:hover{ top:-10px;}
+
+/*样式合并*/
+#wy_contenter .function{}
+#wy_contenter .function_1,#wy_contenter .function_2,#wy_contenter .function_3,#wy_contenter .function_4,#wy_contenter .function_5,#wy_contenter .function_6{height:350px; border-bottom:1px solid #e6e6e6; position:relative;}
+#wy_contenter .text { position:absolute;top:0; width:390px; margin-top:134px;}
+#wy_contenter .text h3{font-size:24px; font-weight:400; line-height:32px; }/*居然用这种方式调节粗细*/
+#wy_contenter .text p{ color:#666666; line-height:24px;} /*怎么测量行高*/
+#wy_contenter .pic{position:absolute; bottom:0;}
+/*end样式合并*/
+
+#wy_contenter .function_1 .text,#wy_contenter .function_3 .text,#wy_contenter .function_5 .text{ left:0;}
+#wy_contenter .function_1 .pic,#wy_contenter .function_3 .pic,#wy_contenter .function_5 .pic { right:0;}
+
+#wy_contenter .function_2 .text,#wy_contenter .function_4 .text,#wy_contenter .function_6 .text{ right:0;}
+#wy_contenter .function_2 .pic,#wy_contenter .function_4 .pic,#wy_contenter .function_6 .pic{ left:0;}
+
+
+/*尾部样式*/
+#wy_footer .footer_content{ width:960px; margin:0 auto; }
+#wy_footer .footer_content .logo{ float:left; margin-top:40px;}
+#wy_footer .footer_content .logo a{}
+#wy_footer .footer_content .logo img{}
+
+#wy_footer .footer_content .copyright{ float:left; margin:54px 0 0 18px; color:#999; font-size:12px; font-family:arial; line-height:20px; height:20px; }
+#wy_footer .footer_content .copyright a{ color:#999;}
+#wy_footer .footer_content .copyright a:hover{ text-decoration:underline;}  /* 文字行高？*/
+
+
+
+
+
+
+
